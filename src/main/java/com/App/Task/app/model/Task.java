@@ -9,17 +9,16 @@ import java.util.Date;
 
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
 @Entity
-@Table(name ="to do list" )
+@Table(name ="to_do_list" )
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String title;
     private String description;
-    private boolean done;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date deadline;
     private int priority;
+    private boolean done;
 
     @Override
     public String toString() {
